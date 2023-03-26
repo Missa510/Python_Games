@@ -1,5 +1,5 @@
 #Pagina web con Flask y Django en Pyhton
-from flask import Flask, render_template
+from flask import *
 
 app = Flask(__name__) #Para verificar que Index sea el archivo principal
 
