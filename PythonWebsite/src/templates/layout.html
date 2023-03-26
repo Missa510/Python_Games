@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA PRINCIPAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Este es el link de bootstrap en la Web :3 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename=('style/style.css')) }}">
+    <!-- Estos son mis humildes estilos :3 -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/footers/">
+    <!-- Para el footer -->
+</head>
+
+<body>
+    <!-- NavBar con Bootstrap -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">My Python WebSite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('AboutMe') }}">About Me</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Inicio del bloque que puede variar (include pa los panas) -->
+    <div class="container p-4">
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer class="p-5 bg-light container-fluid">
+        <div class="row">
+            <div class="col mb-3">
+                <h5>Paginación</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="{{ url_for('AboutMe') }}" class="nav-link p-0 text-muted">About Me</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form action="mailto:sjqv05@gmail.com">
+                    <h5 class="display-6">Enviar mensaje a...</h5>
+                    <p class="fs-6">Monthly digest of what's new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2"></form>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                        <button class="btn btn-outline-primary" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between mt-2 border-top">
+                <p class="fs-6">&copy; 2022, Web site realised by <strong>Santiago Quintero</strong></p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter" />
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram" />
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#facebook" />
+                            </svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- fin de ese bloque -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
