@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="form-signin w-100 m-auto rounded-3">
+    <form action="{{ url_for('AddUser') }}" method="post">
+        <div class="head">
+            <img class="mb-4" src="{{ url_for('static', filename=('Images/user.png')) }}" alt="Logito :3" width="70"
+                height="70">
+            <h1 class="display-3 mb-3 fw-normal text-center">Log In</h1>
+        </div>
+        <p class="fs-6 mb-4">
+            Este es un login con <strong>Python</strong>, HTML y MySQL, porfa loguéate. Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Velit at temporibus cupiditate eligendi omnis laboriosam quasi, ab qui
+            quisquam explicabo impedit voluptate delectus. Iste dignissimos, possimus delectus ex quidem quam?
+        </p>
+        <div class="row mb-3">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="mail" name="mail" placeholder="name@example.com" required>
+                    <label for="mail">Email</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="User.23" required>
+                    <label for="name">Nombre</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-3">
+            <div class="form-floating">
+                <input type="tel" class="form-control" id="tel" name="tel" placeholder="3023432" required>
+                <label for="tel">Teléfono</label>
+            </div>
+        </div>
+
+        <input type="checkbox" class="form-check-input mb-4" value="remember-me" required> Acepto los términos y condiciones
+
+        <button class="w-100 btn btn-lg btn-outline-primary" type="submit">Sign in</button>
+
+        <hr class="hr">
+
+        <p class="mt-5 mb-3 text-muted">&copy; Log In realised by <strong>Santiago Quintero</strong></p>
+    </form>
+</div>
+
+{% endblock %}
