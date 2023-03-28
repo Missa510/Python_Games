@@ -1,10 +1,11 @@
 body {
-    background: #0F2027;
+    background: #403A3E;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: -webkit-linear-gradient(to right, #BE5869, #403A3E);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #BE5869, #403A3E);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 
@@ -62,15 +63,9 @@ body {
 .form-signin {
     max-width: 75%;
     padding: 15px;
-    background: #abbaab;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffffff, #abbaab);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.head{
+.head {
     display: flex;
     align-items: center;
     justify-content: center;
